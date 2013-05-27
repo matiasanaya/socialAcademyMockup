@@ -18,6 +18,18 @@
   <![endif]-->
 </head>
 <body>
+  <div class="navbar">
+  <div class="navbar-inner" style="border-radius:0px;-webkit-border-radius:0px;">
+    <img src="images/icons/Compas@2x.png" alt="Welcome to Social Academy" style="float:left;width:3%;margin-left:30px;margin-top:16px;" />
+    <span class="brand" href="#" style="padding-left:15px;">SocialAcademy</span>
+    <ul class="nav pull-right">
+      <li class="<%= 'active' if params[:action]=='tracks' %>"><a href="#">Tracks</a></li>
+      <li class="<%= 'active' if params[:action]=='tips' %>"><a href="#">Tips</a></li>
+      <li class="<%= 'active' if params[:action]=='profile' %>"><a href="#">Profile</a></li>
+      <li style="padding-left:20px;"><a href="#">Matias Anaya</a></li>
+    </ul>
+  </div>
+</div>
 
   <%= yield %>
 

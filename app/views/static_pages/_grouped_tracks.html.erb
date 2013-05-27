@@ -1,0 +1,14 @@
+<h2><%= title %></h2>
+<div class="row demo-tiles" style="margin-top:20px;">
+  <% tracks.each do |track| %>
+    <% title = track[0]
+      desc = track[1]
+      m = track[2]
+      t = track[3]
+      c = track[4]
+      i = track[5]
+      r = (tracks.first == track)
+      %>
+    <%= render partial: 'track', locals: { title: title, desc: desc, m: m, t: t, c: c, i: i, r: r } %>
+  <% end %>
+</div>

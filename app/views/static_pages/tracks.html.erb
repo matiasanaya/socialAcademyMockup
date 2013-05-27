@@ -1,24 +1,39 @@
 <div class="container" style="">
-  <h2>Email</h2>
-  <div class="row demo-tiles" style="margin-top:20px;">
-    <% tracks = [
-      ['Custom Domain','Get a unique email address','$ 1/mo','30 min','regular', 'huge'],
-      ['Gmail','Not so cool gmail address','free','10 min','easy', 'regular']
-    ]
-    %>
-    <% tracks.each do |track| %>
-      <% title = track[0]
-        desc = track[1]
-        m = track[2]
-        t = track[3]
-        c = track[4]
-        i = track[5]
-        r = (tracks.first == track)
-        %>
-      <%= render partial: 'track', locals: { title: title, desc: desc, m: m, t: t, c: c, i: i, r: r } %>
-    <% end %>
+  <div style="padding:30px;margin:0px;background-color:#ECF0F1;">
+    <h1>Welcome to the Tracks Section</h1>
+    <p>This is your first time here, so feel free to browse through our selection of intresting stuff to do in order to get your business going!</p>
   </div>
-  <h2>Social Profiles</h2>
-  <h2>Web Page</h2>
-  <h2>Extras</h2>
+  <% email_tracks = [
+    ['Custom Domain','Get a unique email address','$ 1/mo','30 min','regular', 'huge'],
+    ['Gmail','Not so cool gmail address','free','10 min','easy', 'regular']
+  ]
+  %>
+  <% social_tracks = [
+    ['Foursquare','Vibrant community of explorers','free','30 min','easy', 'huge'],
+    ['Facebook','Everyone is here','free','20 min','easy', 'regular'],
+    ['Yelp','Yellow pages for the internet','free','20 min','regular', 'regular']
+  ]
+  %>
+  <% web_tracks = [
+    ['Strikingly','Beautiful web site in minutes','$ 9/mo','25 min','regular', 'huge'],
+    ['Custom Built','Get a designer to custom build it','~$1000','days','hard', 'huge']
+  ]
+  %>
+  <% extra_tracks = [
+    ['Open Table','Online reservation system','comission','30 min','hard', 'huge'],
+    ['Square','Accept card payments with your phone','comission','40 min','hard', 'huge']
+  ]
+  %>
+  <% groups = [
+    { title: 'Email', tracks: email_tracks },
+    { title: 'Social Profiles', tracks: social_tracks },
+    { title: 'Web Page', tracks: web_tracks },
+    { title: 'Extras', tracks: extra_tracks }
+  ]
+  %>
+  <% groups.each do |group| %>
+    <!-- <div style="background-color:#BDC3C7;padding:0px;margin:0px;"> -->
+    <%= render partial: 'grouped_tracks', locals: { title: group[:title], tracks: group[:tracks] } %>
+    <!-- </div> -->
+  <% end %>
 </div>
