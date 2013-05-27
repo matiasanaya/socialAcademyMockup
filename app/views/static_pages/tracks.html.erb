@@ -1,0 +1,24 @@
+<div class="container" style="">
+  <h2>Email</h2>
+  <div class="row demo-tiles" style="margin-top:20px;">
+    <% tracks = [
+      ['Custom Domain','Get a unique email address','$ 1/mo','30 min','regular', 'huge'],
+      ['Gmail','Not so cool gmail address','free','10 min','easy', 'regular']
+    ]
+    %>
+    <% tracks.each do |track| %>
+      <% title = track[0]
+        desc = track[1]
+        m = track[2]
+        t = track[3]
+        c = track[4]
+        i = track[5]
+        r = (tracks.first == track)
+        %>
+      <%= render partial: 'track', locals: { title: title, desc: desc, m: m, t: t, c: c, i: i, r: r } %>
+    <% end %>
+  </div>
+  <h2>Social Profiles</h2>
+  <h2>Web Page</h2>
+  <h2>Extras</h2>
+</div>
