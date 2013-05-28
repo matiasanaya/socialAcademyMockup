@@ -24,8 +24,8 @@
     <span class="brand" href="#" style="padding-left:15px;">SocialAcademy</span>
     <% unless params[:action]=='signin' %>
     <ul class="nav pull-right">
-      <li class="<%= 'active' if params[:action]=='tracks' %>"><a href="#">Tracks</a></li>
-      <li class="<%= 'active' if params[:action]=='tips' %>"><a href="#">Tips</a></li>
+      <li class="<%= 'active' if params[:action]=='tracks' %>"><a href="<%= tracks_path%>">Tracks</a></li>
+      <li class="<%= 'active' if params[:action]=='tips' %>"><a href="<%= tips_path%>">Tips</a></li>
       <li class="<%= 'active' if params[:action]=='profile' %>"><a href="#">Profile</a></li>
       <li style="padding-left:20px;"><a href="#">Matias Anaya</a></li>
     </ul>
