@@ -4,6 +4,7 @@ SocialAcademyMockup::Application.routes.draw do
   get "static_pages/tracks", :as => :tracks
   get "static_pages/tips", :as => :tips
   get "static_pages/track_custom_domain", :as => :custom_domains
+  get "static_pages/profile", :as => :profile
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
