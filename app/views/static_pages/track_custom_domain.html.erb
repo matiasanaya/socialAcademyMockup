@@ -1,0 +1,23 @@
+<div class="container">
+  <div style="padding:30px;margin:0px;background-color:#ECF0F1;">
+    <h1>Custom Domain Track</h1>
+    <p>Just follow the steps provided below and you'll have your custom domain address in no time</p>
+  </div>
+  <h2 style="margin-top:20px;">Progress 25%</h2>
+  <div class="progress" style="margin-top:20px;">
+    <div class="bar" style="width: 23%;"></div>
+  </div>
+  <div class="row">
+    <% tasks = [
+      'Pre-requisites','Buy Domain','Get Google Apps','Link account'
+    ]
+    %>
+    <% tasks.each do |task| %>
+      <% c = true if tasks.first == task %>
+      <%= render partial: 'task', locals: { task: task, c: c } %>
+    <% end %>
+  </div>
+  <% tasks.each do |task| %>
+    <%= render partial: 'task_desc', locals: { task: task } %>
+  <% end %>
+</div>

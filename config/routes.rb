@@ -2,6 +2,8 @@ SocialAcademyMockup::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/signin"
   get "static_pages/tracks"
+  get "static_pages/tips"
+  get "static_pages/track_custom_domain"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -22,16 +22,55 @@
   <div class="navbar-inner" style="border-radius:0px;-webkit-border-radius:0px;">
     <img src="images/icons/Compas@2x.png" alt="Welcome to Social Academy" style="float:left;width:3%;margin-left:30px;margin-top:16px;" />
     <span class="brand" href="#" style="padding-left:15px;">SocialAcademy</span>
+    <% unless params[:action]=='signin' %>
     <ul class="nav pull-right">
       <li class="<%= 'active' if params[:action]=='tracks' %>"><a href="#">Tracks</a></li>
       <li class="<%= 'active' if params[:action]=='tips' %>"><a href="#">Tips</a></li>
       <li class="<%= 'active' if params[:action]=='profile' %>"><a href="#">Profile</a></li>
       <li style="padding-left:20px;"><a href="#">Matias Anaya</a></li>
     </ul>
+    <% else %>
+    <ul class="nav pull-right">
+      <li class="<%= 'active' if params[:action]=='signin' %>"><a href="#">Signin</a></li>
+      <li class="<%= 'active' if params[:action]=='signup' %>"><a href="#">Signup</a></li>
+      <li style="padding-left:50px;"></li>
+    </ul>
+    <% end %>
   </div>
 </div>
 
   <%= yield %>
+  <footer style="margin-top:60px;">
+    <div class="container">
+      <div class="row">
+        <div class="span7">
+          <h3 class="footer-title">Feedback</h3>
+          <p>Do you like this beta? Want to get more feature available?<br/>
+            Subscribe to socialAcademy news and updates to stay tuned on releases.<br/>
+            Go to: <a href="#" target="_blank">socialmediaAcademy.com/beta</a>
+          </p>
+
+          <p class="pvl">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://designmodo.com/flat-free/" data-text="Flat UI Free - PSD&amp;HTML User Interface Kit" data-via="designmodo" data-size="large">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </p>
+        </div> <!-- /span8 -->
+
+        <div class="span5">
+          <div class="footer-banner">
+            <h3 class="footer-title">Get The Pro Version</h3>
+            <ul>
+              <li>Tons of Tracks</li>
+              <li>A Lot of Useful Videos</li>
+              <li>More Powerful Recomentdations</li>
+              <li>Extended Customer Support</li>
+            </ul>
+            Go to: <a href="#" target="_blank">socialmediaAcademy.com/pro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Load JS here for greater good =============================-->
   <script src="js/jquery-1.8.3.min.js"></script>

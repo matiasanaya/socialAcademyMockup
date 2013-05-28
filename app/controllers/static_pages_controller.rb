@@ -4,4 +4,13 @@ class StaticPagesController < ApplicationController
 
   def signin
   end
+
+  def tracks
+  end
+
+  def tips
+  end
+
+  def track_custom_domain
+  end
 end
